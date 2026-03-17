@@ -134,7 +134,7 @@ export default function CartPage() {
                       </button>
                     </div>
                     <span className="font-bold">
-                      ${(item.product.price * item.quantity).toFixed(2)}
+                      ₦{(item.product.price * item.quantity).toLocaleString()}
                     </span>
                   </div>
                 </div>
@@ -195,12 +195,12 @@ export default function CartPage() {
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="text-muted-foreground">Subtotal</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>₦{subtotal.toLocaleString()}</span>
             </div>
             {discountPercent > 0 && (
               <div className="flex justify-between text-green-500">
                 <span>Discount ({discountPercent}%)</span>
-                <span>−${(subtotal - total).toFixed(2)}</span>
+                <span>−₦{(subtotal - total).toLocaleString()}</span>
               </div>
             )}
             <div className="flex justify-between">
@@ -211,7 +211,7 @@ export default function CartPage() {
           <Separator />
           <div className="flex justify-between font-bold text-lg">
             <span>Total</span>
-            <span>${total.toFixed(2)}</span>
+            <span>₦{total.toLocaleString()}</span>
           </div>
           <Button
             className="w-full h-12 gap-2"

@@ -54,7 +54,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
 
   const [subcategory, setSubcategory] = useState("All");
   const [sortBy, setSortBy] = useState("featured");
-  const [priceRange, setPriceRange] = useState([0, 1500]);
+  const [priceRange, setPriceRange] = useState([0, 2250000]);
 
   const filtered = useMemo(() => {
     let list = allProducts.filter((p) => {
@@ -143,12 +143,13 @@ export default function CategoryPage({ category }: CategoryPageProps) {
       {/* Price range */}
       <div className="mb-8 flex items-center gap-4">
         <span className="text-xs text-muted-foreground w-24">
-          Price: ${priceRange[0]} – ${priceRange[1]}
+          Price: ₦{priceRange[0].toLocaleString()} – ₦
+          {priceRange[1].toLocaleString()}
         </span>
         <Slider
           min={0}
-          max={1500}
-          step={10}
+          max={2250000}
+          step={10000}
           value={priceRange}
           onValueChange={setPriceRange}
           className="w-48"
@@ -170,7 +171,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
             variant="outline"
             onClick={() => {
               setSubcategory("All");
-              setPriceRange([0, 1500]);
+              setPriceRange([0, 2250000]);
             }}
           >
             Reset Filters

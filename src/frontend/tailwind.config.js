@@ -49,6 +49,11 @@ export default {
           DEFAULT: "oklch(var(--card))",
           foreground: "oklch(var(--card-foreground))",
         },
+        gold: {
+          DEFAULT: "oklch(var(--gold))",
+          light: "oklch(var(--gold-light))",
+          dark: "oklch(var(--gold-dark))",
+        },
         sidebar: {
           DEFAULT: "oklch(var(--sidebar))",
           foreground: "oklch(var(--sidebar-foreground))",
@@ -62,6 +67,7 @@ export default {
       },
       fontFamily: {
         display: ['"Playfair Display"', 'Georgia', 'serif'],
+        cinzel: ['"Cinzel"', 'Georgia', 'serif'],
         body: ['"DM Sans"', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
@@ -78,10 +84,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.8s ease-out forwards",
+        "fade-in": "fade-in 1s ease-out forwards",
       },
     },
   },

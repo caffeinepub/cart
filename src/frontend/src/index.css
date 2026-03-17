@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Cinzel:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.12 0.005 285;
+    --foreground: 0.95 0.02 85;
+
+    --card: 0.14 0.008 285;
+    --card-foreground: 0.95 0.02 85;
+
+    --popover: 0.14 0.008 285;
+    --popover-foreground: 0.95 0.02 85;
+
+    --primary: 0.78 0.12 85;
+    --primary-foreground: 0.1 0.01 285;
+
+    --secondary: 0.22 0.01 285;
+    --secondary-foreground: 0.9 0.02 85;
+
+    --muted: 0.18 0.008 285;
+    --muted-foreground: 0.65 0.03 85;
+
+    --accent: 0.7 0.14 80;
+    --accent-foreground: 0.1 0.01 285;
+
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.28 0.03 85;
+    --input: 0.22 0.01 285;
+    --ring: 0.78 0.12 85;
+
+    --gold: 0.78 0.14 85;
+    --gold-light: 0.88 0.12 85;
+    --gold-dark: 0.58 0.12 75;
+    --marble-dark: 0.1 0.006 285;
+    --marble-mid: 0.14 0.008 285;
+
+    --radius: 0.5rem;
+
+    --sidebar: 0.12 0.005 285;
+    --sidebar-foreground: 0.95 0.02 85;
+    --sidebar-primary: 0.78 0.12 85;
+    --sidebar-primary-foreground: 0.1 0.01 285;
+    --sidebar-accent: 0.22 0.01 285;
+    --sidebar-accent-foreground: 0.9 0.02 85;
+    --sidebar-border: 0.28 0.03 85;
+    --sidebar-ring: 0.78 0.12 85;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", system-ui, sans-serif;
+    background: oklch(0.1 0.006 285);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* ── Marble background ── */
+.marble-bg {
+  background: radial-gradient(
+      ellipse 80% 60% at 20% 10%,
+      oklch(0.16 0.01 285 / 0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 80% at 80% 90%,
+      oklch(0.13 0.008 270 / 0.7) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 100% 100% at 50% 50%,
+      oklch(0.11 0.005 285) 0%,
+      oklch(0.08 0.003 285) 100%
+    );
+  position: relative;
+}
+
+.marble-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ── Gold glow ── */
+.gold-glow {
+  filter: drop-shadow(0 0 12px oklch(0.78 0.14 85 / 0.45));
+}
+
+.gold-text-glow {
+  text-shadow: 0 0 20px oklch(0.78 0.14 85 / 0.5), 0 0 40px
+    oklch(0.78 0.14 85 / 0.25);
+}
+
+/* ── Clock face ── */
+.clock-face {
+  filter: drop-shadow(0 0 40px oklch(0.78 0.14 85 / 0.2))
+    drop-shadow(0 20px 60px oklch(0 0 0 / 0.7));
+}
+
+/* ── Second hand sweep ── */
+.hand-second {
+  transform-origin: center bottom;
+  transition: none;
+}
+
+/* ── Pulse animation ── */
+@keyframes rome-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.colon-pulse {
+  animation: rome-pulse 1s ease-in-out infinite;
+}
+
+/* ── Grain overlay ── */
+.grain-overlay {
+  position: relative;
+}

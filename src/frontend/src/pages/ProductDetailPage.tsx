@@ -215,12 +215,12 @@ export default function ProductDetailPage({
 
           <div className="flex items-baseline gap-3 mb-6">
             <span className="text-4xl font-bold text-foreground">
-              ${product.price}
+              ₦{product.price.toLocaleString()}
             </span>
             {product.originalPrice && (
               <>
                 <span className="text-xl text-muted-foreground line-through">
-                  ${product.originalPrice}
+                  ₦{product.originalPrice.toLocaleString()}
                 </span>
                 <Badge className="bg-green-500/10 text-green-500 border-green-500/20">
                   Save {discount}%

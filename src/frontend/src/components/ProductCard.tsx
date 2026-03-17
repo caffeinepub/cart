@@ -91,10 +91,12 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-1.5">
-            <span className="font-bold text-foreground">${product.price}</span>
+            <span className="font-bold text-foreground">
+              ₦{product.price.toLocaleString()}
+            </span>
             {product.originalPrice && (
               <span className="text-xs text-muted-foreground line-through">
-                ${product.originalPrice}
+                ₦{product.originalPrice.toLocaleString()}
               </span>
             )}
           </div>

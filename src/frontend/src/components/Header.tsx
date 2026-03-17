@@ -130,7 +130,7 @@ export default function Header({ darkMode, toggleDarkMode }: HeaderProps) {
                                 {p.name}
                               </p>
                               <p className="text-xs text-muted-foreground">
-                                ${p.price}
+                                ₦{p.price.toLocaleString()}
                               </p>
                             </div>
                           </button>

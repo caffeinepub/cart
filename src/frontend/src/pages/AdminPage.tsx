@@ -149,7 +149,7 @@ export default function AdminPage() {
     { label: "Total Orders", value: orders.length, icon: ShoppingBag },
     {
       label: "Revenue",
-      value: `$${totalRevenue.toLocaleString()}`,
+      value: `₦${totalRevenue.toLocaleString()}`,
       icon: TrendingUp,
     },
     { label: "Customers", value: orders.length + 42, icon: Users },
@@ -247,7 +247,9 @@ export default function AdminPage() {
                     <td className="p-4 capitalize text-muted-foreground">
                       {p.category}
                     </td>
-                    <td className="p-4 text-right font-semibold">${p.price}</td>
+                    <td className="p-4 text-right font-semibold">
+                      ₦{p.price.toLocaleString()}
+                    </td>
                     <td className="p-4 text-right">
                       <span
                         className={
@@ -325,7 +327,7 @@ export default function AdminPage() {
                       {o.items.length} item{o.items.length !== 1 ? "s" : ""}
                     </td>
                     <td className="p-4 text-right font-semibold">
-                      ${o.total.toFixed(2)}
+                      ₦{o.total.toLocaleString()}
                     </td>
                     <td className="p-4">
                       <Badge className={statusColors[o.status]}>

@@ -243,7 +243,7 @@ export default function AccountPage() {
                         {order.status}
                       </Badge>
                       <span className="font-bold">
-                        ${order.total.toFixed(2)}
+                        ₦{order.total.toLocaleString()}
                       </span>
                     </div>
                   </div>
@@ -323,7 +323,7 @@ export default function AccountPage() {
                     <div className="p-3">
                       <p className="text-sm font-medium truncate">{p.name}</p>
                       <p className="text-sm font-bold text-primary">
-                        ${p.price}
+                        ₦{p.price.toLocaleString()}
                       </p>
                       <div className="flex gap-1.5 mt-2">
                         <Button
@@ -395,7 +395,7 @@ export default function AccountPage() {
                         {item.name}
                       </p>
                       <p className="text-sm font-bold text-primary">
-                        ${item.price}
+                        ₦{item.price.toLocaleString()}
                       </p>
                     </div>
                   </button>
