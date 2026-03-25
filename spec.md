@@ -1,29 +1,32 @@
-# RomeTimer
+# RadioVerse 3D
 
 ## Current State
-New project, no existing code.
+New project — no existing application files.
 
 ## Requested Changes (Diff)
 
 ### Add
-- A clock app named RomeTimer
-- Analog clock with Roman numeral hour markers
-- Digital clock display showing current time
-- Current date display
-- Smooth second-hand animation
-- Elegant, premium design with a Roman/classic aesthetic
+- Full radio app with multiple genre channels (Pop, Jazz, Hip-Hop, Classical, Rock, Afrobeats, Lo-Fi, Electronic)
+- 3D cyberpunk/synthwave visual style with glassmorphism panels
+- Now Playing card with playback controls, seek bar, and equalizer visualizer
+- Station channel grid with 3D clay icons per genre
+- Top Picks section with image-based tiles
+- Nav bar: Explore, Stations, Genre, Account pages
+- Streaming via public radio stream URLs (icecast/shoutcast)
+- Animated neon equalizer bars when audio is playing
 
 ### Modify
-N/A
+- N/A (new project)
 
 ### Remove
-N/A
+- N/A (new project)
 
 ## Implementation Plan
-- Build a frontend-only clock app (no backend needed beyond default)
-- Analog clock face with Roman numerals (I through XII)
-- Smooth animated clock hands (hour, minute, second)
-- Digital time display below the clock
-- Current date with day, month, year
-- Classic/elegant visual design inspired by Roman aesthetics
-- useEffect with setInterval for real-time updates
+1. Backend: store channel definitions (name, genre, frequency, stream URL, description)
+2. Frontend: build full layout matching design preview
+   - Glassmorphism Now Playing card with HTML5 Audio
+   - Station channel cards grid with 3D icon visuals
+   - Top Picks row
+   - Animated equalizer bars using Web Audio API or CSS animation
+   - Three.js/R3F 3D retro radio hero object
+   - Nav with active state, search, user avatar

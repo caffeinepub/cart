@@ -1,5 +1,11 @@
-import RomeTimer from "./pages/RomeTimer";
+import { Toaster } from "@/components/ui/sonner";
+import RadioApp from "./pages/RadioApp";
 
 export default function App() {
-  return <RomeTimer />;
+  return (
+    <>
+      <RadioApp />
+      <Toaster position="bottom-right" theme="dark" />
+    </>
+  );
 }

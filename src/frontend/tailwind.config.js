@@ -49,10 +49,14 @@ export default {
           DEFAULT: "oklch(var(--card))",
           foreground: "oklch(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "oklch(var(--gold))",
-          light: "oklch(var(--gold-light))",
-          dark: "oklch(var(--gold-dark))",
+        neon: {
+          cyan: "oklch(var(--neon-cyan))",
+          magenta: "oklch(var(--neon-magenta))",
+          purple: "oklch(var(--neon-purple))",
+          blue: "oklch(var(--neon-blue))",
+          gold: "oklch(var(--neon-gold))",
+          green: "oklch(var(--neon-green))",
+          red: "oklch(var(--neon-red))",
         },
         sidebar: {
           DEFAULT: "oklch(var(--sidebar))",
@@ -66,14 +70,14 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        cinzel: ['"Cinzel"', 'Georgia', 'serif'],
-        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
       },
       keyframes: {
         "accordion-down": {
@@ -84,20 +88,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-in-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in-up": "fade-in-up 0.8s ease-out forwards",
-        "fade-in": "fade-in 1s ease-out forwards",
       },
     },
   },
