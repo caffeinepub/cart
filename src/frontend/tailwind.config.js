@@ -10,9 +10,7 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       colors: {
@@ -49,15 +47,6 @@ export default {
           DEFAULT: "oklch(var(--card))",
           foreground: "oklch(var(--card-foreground))",
         },
-        neon: {
-          cyan: "oklch(var(--neon-cyan))",
-          magenta: "oklch(var(--neon-magenta))",
-          purple: "oklch(var(--neon-purple))",
-          blue: "oklch(var(--neon-blue))",
-          gold: "oklch(var(--neon-gold))",
-          green: "oklch(var(--neon-green))",
-          red: "oklch(var(--neon-red))",
-        },
         sidebar: {
           DEFAULT: "oklch(var(--sidebar))",
           foreground: "oklch(var(--sidebar-foreground))",
@@ -70,9 +59,10 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
-        body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        orbitron: ['"Orbitron"', 'monospace'],
+        display: ['"Orbitron"', 'monospace'],
+        body: ['"Rajdhani"', 'system-ui', 'sans-serif'],
+        mono: ['"Orbitron"', 'monospace'],
       },
       borderRadius: {
         lg: "var(--radius)",

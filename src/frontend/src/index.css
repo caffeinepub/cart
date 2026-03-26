@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,53 +6,48 @@
 
 @layer base {
   :root {
-    /* Cyberpunk/Synthwave dark palette */
-    --background: 0.09 0.025 265;
-    --foreground: 0.94 0.02 255;
+    /* FIREEYES – deep blue-black / neon-cyan / orange */
+    --background: 0.12 0.03 225;
+    --foreground: 0.94 0.02 210;
 
-    --card: 0.12 0.03 260;
-    --card-foreground: 0.94 0.02 255;
+    --card: 0.15 0.04 220;
+    --card-foreground: 0.94 0.02 210;
 
-    --popover: 0.12 0.03 260;
-    --popover-foreground: 0.94 0.02 255;
+    --popover: 0.15 0.04 220;
+    --popover-foreground: 0.94 0.02 210;
 
-    --primary: 0.88 0.18 210;
-    --primary-foreground: 0.09 0.025 265;
+    --primary: 0.82 0.18 200;
+    --primary-foreground: 0.09 0.03 225;
 
-    --secondary: 0.65 0.28 320;
-    --secondary-foreground: 0.09 0.025 265;
+    --secondary: 0.72 0.22 50;
+    --secondary-foreground: 0.09 0.03 225;
 
-    --muted: 0.16 0.04 260;
-    --muted-foreground: 0.6 0.05 255;
+    --muted: 0.18 0.04 220;
+    --muted-foreground: 0.55 0.06 210;
 
-    --accent: 0.5 0.28 280;
-    --accent-foreground: 0.94 0.02 255;
+    --accent: 0.72 0.22 50;
+    --accent-foreground: 0.09 0.03 225;
 
     --destructive: 0.6 0.25 30;
     --destructive-foreground: 0.98 0 0;
 
-    --border: 0.25 0.06 255;
-    --input: 0.16 0.04 260;
-    --ring: 0.88 0.18 210;
+    --border: 0.22 0.05 218;
+    --input: 0.18 0.04 220;
+    --ring: 0.82 0.18 200;
 
-    --neon-cyan: 0.88 0.18 210;
-    --neon-magenta: 0.65 0.28 320;
-    --neon-purple: 0.5 0.28 280;
-    --neon-blue: 0.55 0.22 250;
-    --neon-gold: 0.75 0.18 70;
-    --neon-green: 0.76 0.19 155;
-    --neon-red: 0.6 0.25 30;
+    --neon-cyan: 0.82 0.18 200;
+    --neon-orange: 0.72 0.22 50;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    --sidebar: 0.1 0.025 265;
-    --sidebar-foreground: 0.94 0.02 255;
-    --sidebar-primary: 0.88 0.18 210;
-    --sidebar-primary-foreground: 0.09 0.025 265;
-    --sidebar-accent: 0.16 0.04 260;
-    --sidebar-accent-foreground: 0.94 0.02 255;
-    --sidebar-border: 0.25 0.06 255;
-    --sidebar-ring: 0.88 0.18 210;
+    --sidebar: 0.12 0.03 225;
+    --sidebar-foreground: 0.94 0.02 210;
+    --sidebar-primary: 0.82 0.18 200;
+    --sidebar-primary-foreground: 0.09 0.03 225;
+    --sidebar-accent: 0.18 0.04 220;
+    --sidebar-accent-foreground: 0.94 0.02 210;
+    --sidebar-border: 0.22 0.05 218;
+    --sidebar-ring: 0.82 0.18 200;
   }
 }
 
@@ -63,178 +58,158 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-    background: linear-gradient(
-      135deg,
-      oklch(0.07 0.025 265) 0%,
-      oklch(0.11 0.035 260) 50%,
-      oklch(0.08 0.02 275) 100%
-    );
+    font-family: "Rajdhani", system-ui, sans-serif;
+    background-color: #0b1117;
     min-height: 100vh;
     overflow-x: hidden;
   }
 }
 
-/* ── Page background with glow patches ── */
-.radio-bg {
-  background: radial-gradient(
-      ellipse 60% 40% at 20% 30%,
-      oklch(0.88 0.18 210 / 0.07) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 50% 35% at 80% 70%,
-      oklch(0.65 0.28 320 / 0.06) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 40% 50% at 50% 50%,
-      oklch(0.5 0.28 280 / 0.04) 0%,
-      transparent 70%
-    ),
-    linear-gradient(
-      165deg,
-      oklch(0.07 0.03 265) 0%,
-      oklch(0.1 0.025 262) 40%,
-      oklch(0.08 0.02 270) 100%
-    );
-  min-height: 100vh;
+/* ── FIREEYES design tokens ── */
+:root {
+  --fe-bg: #0b1117;
+  --fe-panel: #121c24;
+  --fe-panel2: #16222c;
+  --fe-text: #f2f5f7;
+  --fe-cyan: #27d7f0;
+  --fe-orange: #ff8a2a;
+  --fe-border: #1b2a35;
 }
 
-/* ── Glassmorphism panel ── */
-.glass-panel {
-  background: rgba(10, 18, 40, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(120, 220, 255, 0.15);
-  border-radius: 20px;
+/* ── Orbitron headings ── */
+.font-orbitron {
+  font-family: "Orbitron", "Rajdhani", monospace;
 }
 
-.glass-panel-strong {
-  background: rgba(8, 14, 32, 0.85);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(120, 220, 255, 0.25);
-  border-radius: 20px;
+/* ── Neon glow text ── */
+.neon-cyan-text {
+  color: #27d7f0;
+  text-shadow: 0 0 10px rgba(39, 215, 240, 0.8), 0 0 20px
+    rgba(39, 215, 240, 0.4), 0 0 40px rgba(39, 215, 240, 0.2);
 }
 
-/* ── Neon text gradient ── */
-.neon-brand {
-  background: linear-gradient(
-    135deg,
-    oklch(0.88 0.18 210) 0%,
-    oklch(0.65 0.28 320) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 12px oklch(0.88 0.18 210 / 0.6));
+.neon-orange-text {
+  color: #ff8a2a;
+  text-shadow: 0 0 10px rgba(255, 138, 42, 0.8), 0 0 20px
+    rgba(255, 138, 42, 0.4);
 }
 
-/* ── Neon glow button ── */
-.btn-neon {
-  background: linear-gradient(
-    135deg,
-    oklch(0.88 0.18 210) 0%,
-    oklch(0.65 0.28 320) 100%
-  );
-  color: oklch(0.09 0.025 265);
-  font-weight: 700;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 0 20px oklch(0.88 0.18 210 / 0.4), 0 0 40px
-    oklch(0.65 0.28 320 / 0.2);
-  transition: all 0.3s ease;
+/* ── HUD panels ── */
+.hud-panel {
+  background: rgba(11, 17, 23, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(39, 215, 240, 0.3);
+  box-shadow: 0 0 12px rgba(39, 215, 240, 0.1), inset 0 0 12px
+    rgba(39, 215, 240, 0.03);
 }
 
-.btn-neon:hover {
-  box-shadow: 0 0 30px oklch(0.88 0.18 210 / 0.6), 0 0 60px
-    oklch(0.65 0.28 320 / 0.3);
-  transform: translateY(-2px);
+/* ── Landing page sections ── */
+.fe-card {
+  background: #121c24;
+  border: 1px solid #1b2a35;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
-/* ── Equalizer bars ── */
-.eq-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 3px;
-  height: 28px;
-}
-
-.eq-bar {
-  width: 4px;
-  background: linear-gradient(
-    to top,
-    oklch(0.88 0.18 210),
-    oklch(0.65 0.28 320)
-  );
-  border-radius: 2px;
-  min-height: 4px;
-  transition: height 0.1s ease;
-}
-
-.eq-bar.playing {
-  animation: eq-bounce var(--duration, 0.8s) ease-in-out infinite alternate;
-}
-
-@keyframes eq-bounce {
-  0% {
-    height: var(--min-h, 4px);
-  }
-  100% {
-    height: var(--max-h, 24px);
-  }
-}
-
-/* ── Card hover glow ── */
-.card-neon-hover {
-  transition: all 0.3s ease;
-}
-
-.card-neon-hover:hover {
-  border-color: rgba(52, 230, 255, 0.4);
-  box-shadow: 0 0 30px rgba(52, 230, 255, 0.15), inset 0 0 30px
-    rgba(52, 230, 255, 0.02);
+.fe-card:hover {
+  border-color: rgba(39, 215, 240, 0.5);
+  box-shadow: 0 0 24px rgba(39, 215, 240, 0.12);
   transform: translateY(-4px);
 }
 
-/* ── Station listen button outline ── */
-.btn-listen {
-  background: transparent;
-  border: 1px solid;
-  border-radius: 50px;
-  font-size: 11px;
+/* ── Play button ── */
+.btn-play {
+  background: linear-gradient(135deg, #27d7f0 0%, #1ab8d6 100%);
+  color: #0b1117;
+  font-family: "Orbitron", monospace;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 6px 16px;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-listen:hover {
-  color: oklch(0.09 0.025 265) !important;
+.btn-play::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 138, 42, 0.3) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-/* ── Seek bar ── */
-.seek-bar {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 3px;
-  border-radius: 2px;
-  outline: none;
-  cursor: pointer;
+.btn-play:hover::before {
+  opacity: 1;
 }
 
-.seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 12px;
-  height: 12px;
-  background: oklch(0.88 0.18 210);
-  border-radius: 50%;
-  box-shadow: 0 0 8px oklch(0.88 0.18 210 / 0.8);
+.btn-play:hover {
+  box-shadow: 0 0 30px rgba(39, 215, 240, 0.5), 0 0 60px rgba(39, 215, 240, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ── Scan line effect ── */
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* ── Progress bar fill ── */
+.hud-progress-fill {
+  background: linear-gradient(90deg, #27d7f0, #ff8a2a);
+  height: 100%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(39, 215, 240, 0.6);
+}
+
+/* ── Level flash animation ── */
+@keyframes level-flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.level-flash {
+  animation: level-flash 1.5s ease forwards;
+}
+
+/* ── Hit flash ── */
+@keyframes hit-flash {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: inset 0 0 80px rgba(255, 50, 50, 0.6);
+  }
+}
+
+.hit-flash {
+  animation: hit-flash 0.4s ease;
 }
 
 /* ── Scrollbar ── */
@@ -242,51 +217,36 @@
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.1 0.025 265);
+  background: #0b1117;
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.88 0.18 210 / 0.4);
+  background: rgba(39, 215, 240, 0.3);
   border-radius: 2px;
 }
 
-/* ── Playing pulse ring ── */
-@keyframes ping-neon {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.6);
+/* ── Stat counter animation ── */
+@keyframes count-up {
+  from {
     opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.ping-neon {
-  animation: ping-neon 1.2s ease-out infinite;
+.stat-appear {
+  animation: count-up 0.6s ease forwards;
 }
 
-/* ── Floating animation ── */
-@keyframes float-3d {
-  0%,
-  100% {
-    transform: translateY(0px) rotateY(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotateY(5deg);
-  }
-}
-
-/* ── Nav active glow ── */
-.nav-active {
-  color: oklch(0.88 0.18 210);
-  text-shadow: 0 0 10px oklch(0.88 0.18 210 / 0.8);
-}
-
-/* ── Section title ── */
-.section-title {
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+/* ── Hero overlay gradient ── */
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 17, 23, 0.3) 0%,
+    rgba(11, 17, 23, 0.1) 40%,
+    rgba(11, 17, 23, 0.7) 80%,
+    rgba(11, 17, 23, 1) 100%
+  );
 }

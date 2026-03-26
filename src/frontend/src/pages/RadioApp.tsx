@@ -429,7 +429,6 @@ export default function RadioApp() {
       const audio = new Audio();
       audio.src = station.streamUrl;
       audio.volume = volume;
-      audio.crossOrigin = "anonymous";
       audioRef.current = audio;
 
       audio

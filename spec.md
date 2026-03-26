@@ -1,32 +1,34 @@
-# RadioVerse 3D
+# FIREEYES
 
 ## Current State
-New project — no existing application files.
+New project -- no existing application files.
 
 ## Requested Changes (Diff)
 
 ### Add
-- Full radio app with multiple genre channels (Pop, Jazz, Hip-Hop, Classical, Rock, Afrobeats, Lo-Fi, Electronic)
-- 3D cyberpunk/synthwave visual style with glassmorphism panels
-- Now Playing card with playback controls, seek bar, and equalizer visualizer
-- Station channel grid with 3D clay icons per genre
-- Top Picks section with image-based tiles
-- Nav bar: Explore, Stations, Genre, Account pages
-- Streaming via public radio stream URLs (icecast/shoutcast)
-- Animated neon equalizer bars when audio is playing
+- 3D bike racing game using React Three Fiber / Three.js
+- Player controls a motorcycle on a highway road
+- Robot opponent that races against the player
+- Traffic cars driving on the road (obstacles to dodge)
+- Level system from 1 to 500 with increasing difficulty
+- Speed HUD, level display, health/lives, score
+- Fire/neon visual effects on player bike
+- Game states: menu, racing, level complete, game over
 
 ### Modify
 - N/A (new project)
 
 ### Remove
-- N/A (new project)
+- N/A
 
 ## Implementation Plan
-1. Backend: store channel definitions (name, genre, frequency, stream URL, description)
-2. Frontend: build full layout matching design preview
-   - Glassmorphism Now Playing card with HTML5 Audio
-   - Station channel cards grid with 3D icon visuals
-   - Top Picks row
-   - Animated equalizer bars using Web Audio API or CSS animation
-   - Three.js/R3F 3D retro radio hero object
-   - Nav with active state, search, user avatar
+1. Set up React Three Fiber scene with camera, lighting, fog
+2. Create infinite scrolling road with lane markings
+3. Build player bike model (3D geometry, fire trail)
+4. Build robot opponent bike with AI movement
+5. Add traffic cars that spawn and move toward player
+6. Implement keyboard controls (left/right/accelerate/brake)
+7. Collision detection for cars and robot
+8. Level system: speed increases, more traffic, smarter robot per level
+9. HUD overlay: level, speed, lives, score, distance
+10. Menu screen and game over/level complete screens
